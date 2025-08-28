@@ -6,6 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    <div>det her er en div på side 1</div>
+    <script>
+        
+        /*Side 1, der tager imod to tal fra brugeren og udskriver summen af alle de tal mellem
+        1 og 1000 som mindst ét af brugerens tal går op i. (fx hvis brugeren angiver 200 og
+        500 -> 200+400+600+800+1000 + 500.*/
+
+        function toTal() {
+            const tal1 = Number(prompt("Tal mellem 1 og 1000"));
+            const tal2 = Number(prompt("Tal mellem 1 og 1000"));
+
+            if((tal1 > 0 && tal1 <= 1000) && (tal2 > 0 && tal2 <= 1000)) {
+                const sum = 0;
+
+                for(let i=1; i<=1000; ++i) { 
+                    let x = i % tal1 === 0;
+                    let y = i % tal2 === 0;
+
+                    console.log(x);
+                    console.log(y);
+                }
+            } else {
+                alert("Tallet skal være imellem 1 og 1000");
+                toTal();
+            }
+
+             
+                    
+        }
+                    
+        
+    </script>
 </body>
 </html>
