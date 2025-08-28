@@ -7,7 +7,28 @@
 </head>
 <body>
     <script>
-        
+        function doIt() {
+            const input = Number(prompt("skriv et tal"));
+
+            if (isNaN(input)) {
+                alert("Du skal skrive et tal");
+                doIt();
+            } else {
+                let sum = 0;
+                let tal = input;
+
+                while (tal > 0) {
+                    sum += tal % 10; // tager det sidste ciffer
+                    tal = Math.floor(tal / 10); // fjerner det sidste ciffer
+                }
+
+                alert(sum);
+            }
+        }
+
+        doIt();        
+
+
     </script>
 </body>
 </html>
